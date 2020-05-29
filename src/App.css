@@ -147,6 +147,10 @@ button {
   border: 1px solid var(--color-primary-darkest);
 }
 
+button:disabled {
+  background-color: var(--secondary-color);
+}
+
 .field-container {
   text-align: center;
   margin: 1rem auto;
