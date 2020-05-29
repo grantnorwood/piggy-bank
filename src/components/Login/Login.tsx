@@ -13,7 +13,7 @@ const Login: React.FC = () => {
 
   // State
 	const initialState: LoginState = {
-		pin: null,
+		pin: '',
 		isSubmitting: false,
 		error: null,
 	};
