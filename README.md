@@ -1,3 +1,34 @@
+# PiggyBank
+
+**Bacon-powered banking!** 🐷
+
+## Getting Started
+
+_To run this example, simply:_
+
+1. Clone this repo locally _(`git clone git@github.com:grantnorwood/piggy-bank.git`)_
+2. If you'd like to run in dev mode _(no pin required)_, change `isDevelopment: true` in [App.tsx](./src/App.tsx)
+3. Start the app by running `yarn start`
+4. **Bring home that bacon!**
+
+## To-Do
+
+_Here's a list of to-do items that I would implement if I had more time ..._
+
+- Prettier for consistent code formatting
+- Add Types for most classes/functions/etc (set strict to true in tsconfig)
+- Add mobile breakpoints
+- Write unit/e2e tests
+- Abstract away the localStorage calls
+- Add a real db
+- Lots more input validation
+- Add real auth (via jwt, most likely)
+- Componentize all the things!  (well, most of the things ...)
+- Use selectors for pulling values out of app state
+- Verify a11y works for people with various usability impairments
+
+----
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
