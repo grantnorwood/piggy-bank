@@ -2,7 +2,7 @@ import React from 'react'
 import { AppContext } from '../../App'
 import { formatUSCurrency } from '../../utils/currency'
 
-const Balance = () => {
+const Balance: React.FC = () => {
   // Context
   const { state } = React.useContext(AppContext)
 

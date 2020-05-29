@@ -3,12 +3,18 @@ import { withRouter } from 'react-router-dom'
 import { AppContext, DAILY_WITHDRAWL_LIMIT } from "../../App"
 import { formatUSCurrency, calculateWithdrawl } from '../../utils/currency'
 
+interface WithdrawlState {
+  isSubmitting: boolean,
+  error?: string,
+  withdrawlAmount: string,
+}
+
 const Withdraw = (props) => {
   // Context
   const { state, dispatch } = React.useContext(AppContext)
 
   // State
-	const initialWithdrawlState = {
+	const initialWithdrawlState: WithdrawlState = {
 		isSubmitting: false,
     error: null,
     withdrawlAmount: '0',

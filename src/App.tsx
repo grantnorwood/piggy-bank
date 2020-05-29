@@ -26,14 +26,24 @@ export const DAILY_DEPOSIT_LIMIT = 5000
 /**
  * Fetch from some fake db.
  */
-const loadInitialAccountData = () => {
+const loadInitialAccountData = (): object => {
   return {
     balance: 4213.88
   }
 }
 
+interface AppState {
+  isAuthenticated: boolean,
+  user?: {
+    name: string
+  },
+  account?: {
+    balance?: number
+  }
+}
+
 // Auth reducer
-const initialState = isDevelopment
+const initialState: AppState = isDevelopment
   ? {
     isAuthenticated: true,
     user: {
@@ -100,8 +110,8 @@ export const appReducer = (state, action) => {
  *       - Verify a11y works for people with various usability impairments
  */
 
-function App() {
-	const [ state, dispatch ] = React.useReducer(appReducer, initialState);
+const App: React.FC = () => {
+	const [ state, dispatch ] = React.useReducer(appReducer, initialState)
 
 	return (
 		<AppContext.Provider
@@ -128,7 +138,7 @@ function App() {
 				</div>
 			</Router>
 		</AppContext.Provider>
-	);
+	)
 }
 
 export default App

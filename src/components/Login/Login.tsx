@@ -1,13 +1,19 @@
 import React from 'react'
 import { AppContext } from "../../App"
 
-const Login = () => {
+interface LoginState {
+  isSubmitting: boolean,
+  error?: string,
+  pin?: string,
+}
+
+const Login: React.FC = () => {
   // Context
   const { dispatch } = React.useContext(AppContext)
 
   // State
-	const initialState = {
-		pin: '',
+	const initialState: LoginState = {
+		pin: null,
 		isSubmitting: false,
 		error: null,
 	};

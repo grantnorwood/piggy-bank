@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Logo = () => (
+const Logo: React.FC = () => (
   <div className="logo">
     <svg
       height="100px"

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { AppContext } from "../../App"
 
-const Nav = () => {
+const Nav: React.FC = () => {
   // Context
   const { state, dispatch } = React.useContext(AppContext)
 

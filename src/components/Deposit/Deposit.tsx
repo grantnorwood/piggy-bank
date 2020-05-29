@@ -3,12 +3,18 @@ import { withRouter } from 'react-router-dom'
 import { AppContext, DAILY_DEPOSIT_LIMIT } from "../../App"
 import { formatUSCurrency, calculateDeposit } from '../../utils/currency'
 
+interface DepositState {
+  isSubmitting: boolean,
+  error?: string,
+  depositAmount: string,
+}
+
 const Deposit = (props) => {
   // Context
   const { state, dispatch } = React.useContext(AppContext)
 
   // State
-	const initialWithdrawlState = {
+	const initialWithdrawlState: DepositState = {
 		isSubmitting: false,
     error: null,
     depositAmount: '0',

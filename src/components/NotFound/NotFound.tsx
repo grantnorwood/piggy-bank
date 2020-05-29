@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NotFound = () => (<>
+const NotFound: React.FC = () => (<>
 	<h1>404</h1>
 
   <p>This little piggy could not be found.</p>
