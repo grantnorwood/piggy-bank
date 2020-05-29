@@ -81,7 +81,7 @@ const Deposit = (props) => {
 
     <form onSubmit={handleFormSubmit}>
 				<div className="field-container">
-					<label htmlFor="depositAmount">How much?</label>
+					<label htmlFor="depositAmount">How much of that truffle money do you want to put in the bank?</label>
 					<input type="number" id="depositAmount" name="depositAmount" value={data.depositAmount} onChange={handleInputChange} />
 				</div>
 				<div className="button-container">
